@@ -1,0 +1,15 @@
+# https://www.datacamp.com/community/tutorials/categorical-data  # Reading Material #
+                                                                 ####################
+from sklearn.preprocessing import LabelBinarizer
+
+lb = LabelBinarizer()
+lb_results = lb.fit_transform(cat_df_flights_onehot_sklearn['carrier'])
+lb_results_df = pd.DataFrame(lb_results, columns=lb.classes_)
+
+print(lb_results_df.head())
+
+# Reading Material-2: https://towardsdatascience.com/encoding-categorical-features-21a2651a065c
+
+# apply le on categorical feature columns
+X[categorical_cols] = X[categorical_cols].apply(lambda col: le.fit_transform(col))
+X[categorical_cols].head(10)
